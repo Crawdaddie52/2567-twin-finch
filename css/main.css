@@ -1,0 +1,304 @@
+@charset "UTF-8";
+/* CSS Document */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+	1.1 - Headings
+	1.2 - Body Copy
+	1.3 - Buttons
+	1.4 - Forms
+	1.5 - Lists
+	1.6 - Tables
+2.0 - Navigation Menus
+	3.1 - Main Menu
+	3.2 - Sub Menu
+	3.3 - Footer Menu
+3.0 - Content
+	3.1 - Site Structure (Site Header, Advertisement, Site Footer)
+	3.2 - Section Name
+	3.3 - Section Name
+4.0 - Media
+5.0 - Utility
+	5.1 - Background Colors
+	5.2 - Text Colors
+	5.3 - Text Sizes
+	5.4 - Alignments
+--------------------------------------------------------------*/
+#logo {
+	background-color: #000;
+	float: left;
+	height: 116px;
+	width: 156px;
+	}
+#nav {
+	background-color: #666666;
+	float: right;
+	height: 145px;
+	width: 166px;
+	}
+#nav li {
+	padding: 6px 12px;
+	list-style: none;
+	}
+a {
+	width: 153px;
+	height: 36px;
+	padding: 10px 16px;
+	color: white;
+	background-color: black;
+	}
+#quote {
+	text-align: right; /*-- Cant figure this one out */
+	float: right;
+	}
+.col-1-2 {
+	margin-top: 90px;
+	}
+.col-3-4 {
+	margin-top: 112px;
+	}
+.col-1-3 {
+	margin-top: 60px;
+	}
+.col-5-12 {
+	margin-top: 165px;
+	}
+.col-7-12 {
+	margin-top: 70px;
+	}
+.product-1 {
+	background-color: #000;
+	height: 370px;
+	width: 260px;
+	}
+.product-2 {
+	background-color: #000;
+	height: 292px;
+	width: 266px;
+	}
+#about-img {
+	background-color: #000;
+	height: 277px;
+	width: 467px;
+	}
+#map {
+	background-color: #000;
+	float: right;
+	height: 476px;
+	width: 590px;
+	}
+.form {
+	background-color: #000;
+	width: 415px;
+	height: 46px;
+	}
+#form-img {
+	background-color: #000;
+	height: 640px;
+	width: 331px;
+	}
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+	height: inherit;
+	}
+*, *:after, *:before {
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+.row:after {
+	clear: both;
+	content: "";
+	display: table;
+	}
+/*-- COLUMNS --*/
+
+[class*='col-']	{
+	float: left;
+	padding-right: 20px;
+	margin-bottom: 15px;
+	}
+[class*='col-']:last-of-type {
+	padding: 0;
+	}
+.col-1-1 {
+	width: 100%;
+	}
+.col-1-2 {
+	width: 50%;
+	}
+.col-1-3 {
+	width: 33.33%;
+	}
+.col-2-3 {
+	width: 66.66%;
+	}
+.col-1-4 {
+	width: 25%;
+	}
+.col-3-4 {
+	width: 75%;
+	}
+.col-1-5 {
+	width: 20%;
+	}
+.col-2-5 {
+	width: 40%;
+	}
+.col-3-5 {
+	width: 60%;
+	}
+.col-1-6 {
+	width: 16.66%;
+	}
+.col-5-6 {
+	width: 83.33%;
+	}
+.col-1-7 {
+	width: 14.28%;
+	}
+.col-3-7 {
+	width: 42.86%;
+	}
+.col-4-7 {
+	width: 57.14%;
+	}
+.col-1-8 {
+	width: 12.50%
+	}
+.col-3-8 {
+	width: 37.50%;
+	}
+.col-5-8 {
+	width: 62.50%;
+	}
+.col-1-9 {
+	width: 11.11%;
+	}
+.col-2-9 {
+	width: 22.22%;
+	}
+.col-7-9 {
+	width: 77.77%;
+	}	
+.col-1-10 {
+	width: 10%;
+	}
+.col-4-10 {
+	width: 40%;
+	}
+.col-6-10 {
+	width: 60%;
+	}
+.col-1-11 {
+	width: 9.09%;
+	}
+.col-4-11 {
+	width: 36.36%;
+	}
+.col-7-11 {
+	width: 63.60%;
+	}
+.col-1-12 {
+	width: 8.33%;
+	}
+.col-5-12 {
+	width: 41.66%;
+	}
+.col-7-12 {
+	width: 58.33%;
+	}
+	
+/*-- 480PX VIEWPORT --*/
+
+
+@media (max-width: 480px) {
+
+.wrapper {
+		width: 85%;
+		}
+		
+/*--- 1.0 TYPOGRAPHY ---*/
+
+h1 {
+	font-size: 3.5rem;
+	}
+h2 {
+	font-size: 2rem;
+	}
+h3 {
+	font-size: 1.5rem;
+	}
+	
+/*--- 1.2 BODY COPY---*/
+
+header p, #team-img p {
+		width: inherit;
+		}
+#team-img, .col-1-4, .col-1-3, .col-1-3 p {
+	text-align: center;
+	}
+
+/*--- 3.1 SITE STRUCTURE ---*/	
+
+.col-1-4:nth-child(even), .col-1-3:nth-child(3), .col-1-1, .col-1-7, .col-1-11, .col-1-6:nth-child(even), .col-1-8:nth-child(4), .col-1-9:nth-child(9), .col-1-9:nth-child(3), .col-1-9:nth-child(6), .col-1-10:nth-child(5), .col-1-12:nth-child(4), .col-1-12:nth-child(8) {
+		padding: 0;
+		}
+.col-1-5, .col-1-10 {
+		width: 20%;
+		}
+.col-sm, .col-1-12, .col-1-8 {
+		width: 25%;
+		}
+.col-1-3, .col-1-9, header ul li {
+		width: 33.33%;
+		}
+.col-1-4, .col-1-3 {
+		padding: 0;
+		}
+.col-1-3 {
+		margin-left: 25px;
+		}
+header ul li {
+		display: inline-block;
+		margin-left: 0;
+	}
+header ul li:first-child, #buttons, #designs {
+		margin: 0 auto;
+		}
+header ul li:last-child{
+		margin-left: 0;
+		}
+#buttons {
+		display: flex;
+		}
+.logo {
+		margin-left: 10px;
+		padding-top: 25px;
+		}
+.col-1-3 p, .col-1-4 p {
+		margin-bottom: 25px;
+		}
+.col-1-3:nth-child(3) {
+		margin-bottom: 250px;
+		}
+.col-1-4:nth-child(4) p{
+		margin-bottom: 75px;
+		}
+.col-1-6, .col-5-6, .col-3-4 {
+		width: 50%;
+		}
+.col-1-7, .col-1-11, .col-4-7, #buttons, .col-1-4, .col-1-3 {
+		width: 100%;
+		}
+		
+/*--- 5.0 UTILITY ---*/
+
+#hero-img, #team-img, #works-img {
+		background-image: none;
+		}
+	}
