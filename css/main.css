@@ -25,7 +25,27 @@
 	5.3 - Text Sizes
 	5.4 - Alignments
 --------------------------------------------------------------*/
+
 /*-- 1.1 HEADINGS --*/
+h2, h3, label, a {
+	font-family: 'Concert One', cursive;
+	color: #2a494d;
+	}
+p {
+	font-family: 'Dosis', sans-serif;
+	color: #2a494d;
+	}
+h2 {
+	color: #2a494d;
+	font-size: 36px;
+	letter-spacing: 2px;
+	}
+a {
+	letter-spacing: 1.5px;
+	}
+#products h2 {
+	padding-top: 60px;
+	}
 #newsletter h3 {
 	display: inline-block;
 	}
@@ -49,8 +69,6 @@ blockquote p {
 	
 /*-- 1.3 BUTTONS --*/		
 a {
-	width: 153px;
-	height: 36px;
 	padding: 10px 16px;
 	color: white;
 	text-decoration: none;
@@ -83,6 +101,8 @@ fieldset {
 	}
 input {
 	border-style: none;
+	color:  #2a494d;
+	font-family: 'Dosis', sans-serif;
 	width: 415px;
 	height: 46px;
 	}
@@ -93,28 +113,30 @@ textarea {
 	}
 	
 /*-- 1.5 LISTS --*/					
-#nav li {
+nav li {
 	padding: 6px 12px;
 	}
 footer li {
 	margin-left: 15px;
 	margin-top: 80px;
 	}	
-#nav li, footer li {
+nav li, footer li {
 	list-style: none;
-	}	
-/*-- 2.0 NAVIGATIONS --*/	
-#nav {
-	float: right;
-	height: 145px;
-	width: 166px;
 	}
-
+		
+/*-- 2.0 NAVIGATIONS --*/	
+ nav.col-1-6 {
+	top: 0;
+	position: fixed;
+	right: 10.05%;
+	z-index: 2;
+	background-color: rgba(42,73,77, 0.8);
+	}
+	
 /*-- 3.1 SITE STRUCTURE --*/
 .wrapper {
 	width: 80%;
 	margin: 0 auto;
-	height: inherit;
 	}
 *, *:after, *:before {
 	-moz-box-sizing: border-box;
@@ -134,9 +156,10 @@ blockquote {
 	}
 .col-1-3 .col-1-2 {
 	width: 100%;
+	margin-top: 10px;
 	}
 .col-1-2 {
-	margin-top: 90px;
+	margin-top: 15px;
 	}
 .col-1-3 {
 	margin-top: 60px;
@@ -160,7 +183,7 @@ blockquote {
 	width: 467px;
 	}
 #newsletter{
-	background-color: #585757;
+	background-color: #438f96;
 	height: 165px;
 	margin-top: 45px;
 	}
@@ -178,9 +201,8 @@ blockquote {
 footer .wrapper {
 	width: 30%;
 	}
-footer {
-	height: 160px;
-	margin-top: 70px;
+footer ul {
+	display: inline-block;
 	}
 footer .logo {
 	margin-top: 30px;
@@ -188,9 +210,6 @@ footer .logo {
 #facebook, #twitter, #linked-in {
 	height: 25px;
 	width: 25px;
-	}
-footer {
-	display: flex;
 	}
 	
 /*-- 5.0 UTILITY --*/
@@ -212,13 +231,42 @@ footer {
 #linked-in:hover {
 	background: url(../img/linked-in.png) 0 -25px;
 	}
-#form-img, #about-img, .product-2, .product-1, textarea, input, a {
-	background-color: #000;
+textarea, input {
+	background-color: #b2e1ea;
 	}
-#nav, footer {
+/*--  Button Hovers and stuff */
+.button {
+	background-color: #2a494d;
+	}
+.button:hover {
+	background-color: #b2e1ea;
+	color: #22929e;
+	-o-transition:.6s;
+  	-ms-transition:.6s;
+  	-moz-transition:.6s;
+  	-webkit-transition:.6s;
+  	transition:.6s;
+	}
+nav a:hover {
+	color: #85d2de;
+	-o-transition:.6s;
+  	-ms-transition:.6s;
+  	-moz-transition:.5s;
+  	-webkit-transition:.6s;
+  	transition:.6s;
+	}
+nav, footer {
 	background-color: #666666;
 	}
-
+.col-1-2 .col-1-2 a {
+	background-color: none;
+	}
+.bg-blue {
+	background-color: #85d2de;
+	}
+#map {
+	color: rgba(133, 210, 222, .5);
+	}
 /*-- COLUMNS --*/
 [class*='col-']	{
 	float: left;
@@ -323,7 +371,7 @@ footer {
 @media (max-width: 480px) {
 
 .wrapper {
-		width: 85%;
+		width: 90%;
 		}
 		
 /*--- 1.0 TYPOGRAPHY ---*/
@@ -332,20 +380,31 @@ h1 {
 	font-size: 3.5rem;
 	}
 h2 {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	}
 h3 {
-	font-size: 1.5rem;
+	font-size: 1 rem;
 	}
 	
 /*--- 1.2 BODY COPY---*/
 .col-7-12 p {
 	margin-left: 10px;
 	}
-		
+blockquote {
+	margin-left: 15px;
+	}
 /*--- 3.1 SITE STRUCTURE ---*/	
 .wrapper, .col-1-2, .col-5-12, #about-img {
 	width: 100%;
+	}
+nav ul {
+	position: none; /* Fix sticky nav on small display */
+	}
+nav ul {
+	padding: 0;
+	}
+.col-1-2 {
+	margin-top: 20px;
 	}
 .col-7-12, #shipping, #about-us p, #contact-us form {
 	margin-left: 25px;
@@ -353,14 +412,33 @@ h3 {
 section h2, blockquote, .col-7-12 p {
 	text-align: center;
 	}
+.col-5-12 {
+	margin-top: 70px;
+	}
+.col-7-12 {
+	margin-top: 30px;
+	}
 blockquote, .col-7-12 p {
 	width: 95%;
 	}
 .col-1-3 {
-	width: 45%;
+	width: 100%;
+	margin-top: 25px;
 	}
 .col-1-3 .col-1-2 {
 	width: 50%;
+	}
+.col-1-2 .col-1-2 {
+	width: 50%;
+	}
+.col-1-2 .col-1-2 p, .col-1-2 .col-1-2 header, .col-1-2 .col-1-2 a img, .col-1-3 .col-1-2 p, .col-1-3 .col-1-2 header{
+	margin-left: 35px;
+	}
+#shipping {
+	margin-top: 0;
+	}
+#products h2 {
+	padding-top: 45px;
 	}
 #contact-us form {
 	margin: 0 auto;
@@ -374,7 +452,7 @@ blockquote, .col-7-12 p {
 #newsletter input {
 	width: 30%;
 	}
-footer .wrapper {
+footer .wrapper{
 	width: 80%;
 	}
 	}
